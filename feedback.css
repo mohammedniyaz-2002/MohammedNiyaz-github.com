@@ -1,0 +1,24 @@
+@import url('base.css');
+body{display:grid;place-items:center;padding:2rem 20px}
+.container{width:min(560px,100%)}
+form{padding:2.8rem;border:1px solid var(--line);border-radius:32px;background:rgba(0,0,0,.35);backdrop-filter:blur(14px);display:flex;flex-direction:column;gap:2rem}
+.content h2{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:2.8rem;letter-spacing:-.015em;text-align:center;margin-bottom:2rem}
+#emoji{display:grid;grid-template-columns:repeat(3,1fr);row-gap:.6rem;justify-items:center;margin-bottom:2rem}
+#e1,#e2,#e3{grid-row:1;font-size:3rem;cursor:pointer;filter:grayscale(1);opacity:.5;transition:all .35s var(--ease)}
+#e1:hover,#e2:hover,#e3:hover{opacity:1;filter:none;transform:translateY(-3px)}
+#e1{grid-column:1}#e2{grid-column:2}#e3{grid-column:3}
+#m1,#m2,#m3{grid-row:2;font-family:'General Sans',sans-serif;font-weight:400;font-size:1rem;color:var(--mut)}
+#m1{grid-column:1}#m2{grid-column:2}#m3{grid-column:3}
+#n1,#n2,#n3{grid-row:3;accent-color:#39FF14;width:18px;height:18px;margin-top:.4rem}
+#n1{grid-column:1}#n2{grid-column:2}#n3{grid-column:3}
+#emoji:has(#n1:checked) #e1,#emoji:has(#n2:checked) #e2,#emoji:has(#n3:checked) #e3{opacity:1;filter:none;transform:scale(1.2)}
+#emoji:has(#n1:checked) #m1,#emoji:has(#n2:checked) #m2,#emoji:has(#n3:checked) #m3{color:var(--g)}
+#name{display:flex;flex-direction:column;gap:1rem}
+#name input,#name textarea{width:100%;background:transparent;border:1px solid var(--line);border-radius:9999px;padding:1rem 1.4rem;color:#fff;font:inherit;font-weight:300;transition:border-color .3s}
+#name textarea{border-radius:24px;resize:vertical;min-height:140px}
+#name input::placeholder,#name textarea::placeholder{color:rgba(255,255,255,.35)}
+#name input:focus,#name textarea:focus{border-color:var(--g);outline:none}
+#btn{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:500;color:#fff;background:#000;border:1px solid var(--line);padding:1.1rem 2.2rem;border-radius:9999px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.9rem;transition:all .3s var(--ease)}
+#btn::after{content:'';width:10px;height:10px;border-radius:50%;background:var(--g);animation:pulse 2s infinite ease-in-out}
+#btn:hover{background:#fff;color:#000;border-color:#fff;transform:translateY(-2px)}

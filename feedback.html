@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedback.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <div class="video-container"><video id="bg-video" autoplay muted loop playsinline preload="auto"><source src="katana.mp4" type="video/mp4"></video></div>
+    <div class="container">
+        <form action="database.php" method="post">
+            <div class="content" >
+                <h2>Feedback</h2>
+                <div id="emoji">
+                    <p id="e1">😣</p>
+                    <p id="e2">😊</p>
+                    <p id="e3">😃</p>
+                    <h3 id="m1">Poor</h3>
+                    <h3 id="m2">Good</h3>
+                    <h3 id="m3">Excelent</h3>
+                    <input type="radio" name="faces" id="n1" value="Poor">
+                    <input type="radio" name="faces" id="n2" value="Good">
+                    <input type="radio" name="faces" id="n3" value="Excellent">
+                </div>
+                <div id="name">
+                    <input type="text" name="Username" id="name1" placeholder="Username" required>
+                    <input type="email" name="Email_ID" id="name2" placeholder="Email.com" required> 
+                    <textarea name="Content" id="name3" cols="30" rows="10" placeholder="Suggestions.."></textarea>
+                </div>
+            </div>
+            <button id="btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script>
+    var e1 = document.getElementById("e1");
+    var e2 = document.getElementById("e2");
+    var e3 = document.getElementById("e3");
+    var n1 = document.getElementById("n1");
+    var n2 = document.getElementById("n2");
+    var n3 = document.getElementById("n3");
+
+    e1.addEventListener("click",()=>{
+        n1.checked = true;
+    })
+    e2.addEventListener("click",()=>{
+        n2.checked = true;
+    })
+    e3.addEventListener("click",()=>{
+        n3.checked = true;
+    })
+
+</script>
+<script src="ui.js" defer></script>
+</html>

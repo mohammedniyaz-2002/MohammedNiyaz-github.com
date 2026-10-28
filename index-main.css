@@ -1,0 +1,16 @@
+@import url('base.css');
+.container{padding:7rem 20px 0;max-width:1300px;margin:0 auto}
+#main-img{position:fixed;top:1.2rem;left:20px;z-index:50}
+#main-img img{height:38px;width:auto}
+#nav{position:fixed;top:1.2rem;right:20px;z-index:50}
+#nav a p{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.4rem;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:9999px;font-size:.95rem;transition:all .3s var(--ease)}
+#nav a:hover p{background:#fff;color:#000}
+.title{text-align:center;margin-bottom:4rem}
+.title h1{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(2.6rem,6vw,5rem);letter-spacing:-.015em;line-height:1.1}
+#template{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2rem 1.6rem}
+#template a{display:block;transition:transform .4s var(--ease)}
+#template a img{width:100%;border-radius:16px;border:1px solid var(--line);transition:border-color .3s,box-shadow .3s}
+#template a:hover{transform:translateY(-4px)}
+#template a:hover img{border-color:var(--g);box-shadow:0 0 30px rgba(57,255,20,.15)}
+#template a p{font-family:'General Sans',sans-serif;margin-top:.8rem;color:var(--mut);font-size:1rem}
+#template a:hover p{color:#fff}
